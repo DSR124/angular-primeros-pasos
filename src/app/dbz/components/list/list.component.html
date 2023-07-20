@@ -1,0 +1,28 @@
+<h4>LISTADO</h4>
+<ul class="list-group-item d-flex justify-content-between align-items-center">
+  <li *ngFor="
+  let Character of characterList; let i= index"
+
+  class="list-group-item"
+  [ngClass]="{'list-group-item-success': true}"
+
+  >
+
+
+   <div>
+
+    <span class="text-primary">{{ i + 1}}</span>
+
+    <span>{{ Character.name}} - </span>
+    <strong> POWER : </strong>
+    <span>{{ Character.power}}</span>
+
+   </div>
+
+
+  <button (click)="onDeleteCharacter(Character.id)" class="btn btn-danger">X</button>
+
+
+</li>
+
+</ul>
